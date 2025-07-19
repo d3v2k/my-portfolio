@@ -233,3 +233,31 @@ export const revealSection: Variants = {
     },
   },
 };
+
+// Skills-specific animations
+export const skillCardHover: Variants = {
+  rest: {
+    scale: 1,
+    boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
+  },
+  hover: {
+    scale: 1.02,
+    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+    transition: {
+      duration: 0.2,
+      ease: 'easeOut',
+    },
+  },
+};
+
+export const skillProgressBar: Variants = {
+  hidden: { width: 0 },
+  visible: (percentage: number) => ({
+    width: `${percentage}%`,
+    transition: {
+      duration: 1.2,
+      ease: 'easeOut',
+      delay: 0.3,
+    },
+  }),
+};

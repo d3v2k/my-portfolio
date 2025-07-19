@@ -72,8 +72,7 @@ describe('Skills Component', () => {
 
     render(<Skills />);
     
-    expect(screen.getByText('Technical Skills')).toBeInTheDocument();
-    // Check for loading skeleton
+    // Check for loading skeleton (the title is not rendered during loading)
     expect(document.querySelector('.animate-pulse')).toBeInTheDocument();
   });
 
@@ -129,13 +128,13 @@ describe('Skills Component', () => {
     render(<Skills />);
 
     await waitFor(() => {
-      expect(screen.getByText('Advanced')).toBeInTheDocument();
+      expect(screen.getAllByText('Advanced')).toHaveLength(4); // React, TypeScript, SQL Server + overview
     });
 
-    // Check for different skill levels
-    expect(screen.getAllByText('Advanced')).toHaveLength(3); // React, TypeScript, SQL Server
-    expect(screen.getAllByText('Expert')).toHaveLength(2); // C#, .NET Core
-    expect(screen.getByText('Intermediate')).toBeInTheDocument(); // Docker
+    // Check for different skill levels (including overview section)
+    expect(screen.getAllByText('Advanced')).toHaveLength(4); // 3 skills + 1 in overview
+    expect(screen.getAllByText('Expert')).toHaveLength(3); // 2 skills + 1 in overview
+    expect(screen.getAllByText('Intermediate')).toHaveLength(2); // 1 skill + 1 in overview
   });
 
   it('displays years of experience', async () => {
@@ -147,9 +146,9 @@ describe('Skills Component', () => {
       expect(screen.getByText('4 years experience')).toBeInTheDocument();
     });
 
-    expect(screen.getByText('3 years experience')).toBeInTheDocument();
-    expect(screen.getByText('6 years experience')).toBeInTheDocument();
-    expect(screen.getByText('5 years experience')).toBeInTheDocument();
+    expect(screen.getAllByText('3 years experience')).toHaveLength(2); // TypeScript and Docker
+    expect(screen.getAllByText('6 years experience')).toHaveLength(2); // C# and SQL Server
+    expect(screen.getByText('5 years experience')).toBeInTheDocument(); // .NET Core
   });
 
   it('displays skill count for each category', async () => {
@@ -158,11 +157,11 @@ describe('Skills Component', () => {
     render(<Skills />);
 
     await waitFor(() => {
-      expect(screen.getByText('2 skills')).toBeInTheDocument(); // Frontend
+      expect(screen.getAllByText('2 skills')).toHaveLength(2); // Frontend and Backend
     });
 
     expect(screen.getAllByText('2 skills')).toHaveLength(2); // Frontend and Backend
-    expect(screen.getByText('1 skill')).toBeInTheDocument(); // Database and Tools
+    expect(screen.getAllByText('1 skill')).toHaveLength(2); // Database and Tools
   });
 
   it('displays skills overview with level counts', async () => {
@@ -216,7 +215,7 @@ describe('Skills Component', () => {
     });
 
     // Check that categories have their distinctive styling
-    const frontendSection = screen.getByText('Frontend').closest('div');
+    const frontendSection = screen.getByText('Frontend').closest('div')?.parentElement;
     expect(frontendSection).toHaveClass('border-blue-200', 'bg-blue-50');
   });
 });

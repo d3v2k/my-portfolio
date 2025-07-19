@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
-import { staggerContainer, fadeInUp, scaleIn } from '../../utils/animations';
+import { staggerContainer, fadeInUp, scaleIn, skillProgressBar } from '../../utils/animations';
 import { groupSkillsByCategory } from '../../utils/validation';
 import { loadSkillsData } from '../../utils/dataLoader';
 import type { Skill } from '../../types';
@@ -30,12 +30,14 @@ interface SkillCardProps {
 
 function SkillCard({ skill, index }: SkillCardProps) {
   const levelConfig = skill.level ? skillLevelConfig[skill.level] : null;
-  
+
   return (
     <motion.div
       variants={scaleIn}
       custom={index}
-      className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200"
+      initial="rest"
+      whileHover="hover"
+      className="bg-white rounded-lg p-4 shadow-sm border border-gray-200"
     >
       <div className="flex items-center justify-between mb-3">
         <h4 className="font-semibold text-gray-900 text-sm">{skill.name}</h4>
@@ -45,21 +47,22 @@ function SkillCard({ skill, index }: SkillCardProps) {
           </span>
         )}
       </div>
-      
+
       {/* Skill level indicator bar */}
       {levelConfig && (
         <div className="mb-2">
           <div className="w-full bg-gray-200 rounded-full h-2">
             <motion.div
               className={`h-2 rounded-full ${levelConfig.color}`}
-              initial={{ width: 0 }}
-              animate={{ width: `${levelConfig.percentage}%` }}
-              transition={{ duration: 1, delay: index * 0.1 }}
+              variants={skillProgressBar}
+              initial="hidden"
+              animate="visible"
+              custom={levelConfig.percentage}
             />
           </div>
         </div>
       )}
-      
+
       {/* Years of experience */}
       {skill.yearsOfExperience && (
         <p className="text-xs text-gray-600">
@@ -78,7 +81,7 @@ interface SkillCategoryProps {
 
 function SkillCategory({ category, skills, index }: SkillCategoryProps) {
   const config = categoryConfig[category as keyof typeof categoryConfig] || categoryConfig.other;
-  
+
   return (
     <motion.div
       variants={fadeInUp}
@@ -94,7 +97,7 @@ function SkillCategory({ category, skills, index }: SkillCategoryProps) {
           {skills.length} skill{skills.length !== 1 ? 's' : ''}
         </span>
       </div>
-      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
         {skills.map((skill, skillIndex) => (
           <SkillCard key={skill.name} skill={skill} index={skillIndex} />
@@ -108,7 +111,7 @@ export default function Skills() {
   const [skills, setSkills] = useState<Skill[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const { ref, isIntersecting } = useIntersectionObserver({
+  const { ref } = useIntersectionObserver({
     threshold: 0.1,
     triggerOnce: true,
   });
@@ -134,9 +137,9 @@ export default function Skills() {
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+            <p className="text-xl text-gray-600 mb-8">Loading skills data...</p>
             <div className="animate-pulse">
-              <div className="h-8 bg-gray-200 rounded w-48 mx-auto mb-4"></div>
-              <div className="h-4 bg-gray-200 rounded w-96 mx-auto mb-12"></div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {[...Array(4)].map((_, i) => (
                   <div key={i} className="h-64 bg-gray-200 rounded-xl"></div>
@@ -165,12 +168,29 @@ export default function Skills() {
   const categoryOrder = ['frontend', 'backend', 'database', 'tools', 'other'];
   const orderedCategories = categoryOrder.filter(cat => groupedSkills[cat]?.length > 0);
 
+  // Debug info for troubleshooting
+  if (skills.length === 0 && !loading && !error) {
+    return (
+      <div className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
+            <p className="text-red-600">No skills data found. Debug info:</p>
+            <p className="text-sm text-gray-600">Skills array length: {skills.length}</p>
+            <p className="text-sm text-gray-600">Loading: {loading.toString()}</p>
+            <p className="text-sm text-gray-600">Error: {error || 'none'}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <section ref={ref} className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
-          animate={isIntersecting ? "visible" : "hidden"}
+          animate="visible"
           variants={staggerContainer}
           className="text-center mb-16"
         >
@@ -191,7 +211,7 @@ export default function Skills() {
 
         <motion.div
           initial="hidden"
-          animate={isIntersecting ? "visible" : "hidden"}
+          animate="visible"
           variants={staggerContainer}
           className="grid grid-cols-1 lg:grid-cols-2 gap-8"
         >
@@ -208,7 +228,7 @@ export default function Skills() {
         {/* Skills summary */}
         <motion.div
           initial="hidden"
-          animate={isIntersecting ? "visible" : "hidden"}
+          animate="visible"
           variants={fadeInUp}
           className="mt-16 text-center"
         >
