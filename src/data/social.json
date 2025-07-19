@@ -1,0 +1,32 @@
+[
+  {
+    "platform": "GitHub",
+    "url": "https://github.com/johndeveloper",
+    "icon": "github",
+    "username": "johndeveloper"
+  },
+  {
+    "platform": "LinkedIn",
+    "url": "https://linkedin.com/in/johndeveloper",
+    "icon": "linkedin",
+    "username": "johndeveloper"
+  },
+  {
+    "platform": "Twitter",
+    "url": "https://twitter.com/johndev",
+    "icon": "twitter",
+    "username": "@johndev"
+  },
+  {
+    "platform": "Stack Overflow",
+    "url": "https://stackoverflow.com/users/123456/john-developer",
+    "icon": "stackoverflow",
+    "username": "john-developer"
+  },
+  {
+    "platform": "Dev.to",
+    "url": "https://dev.to/johndeveloper",
+    "icon": "devto",
+    "username": "johndeveloper"
+  }
+]

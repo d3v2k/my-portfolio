@@ -1,0 +1,67 @@
+[
+  {
+    "id": "enterprise-web-app",
+    "title": "Enterprise Web Application",
+    "description": "Full-stack enterprise application built with .NET Core and Angular",
+    "longDescription": "A comprehensive enterprise web application featuring user management, reporting, and business process automation. Built with clean architecture principles and modern development practices.",
+    "technologies": [".NET Core", "C#", "Angular", "TypeScript", "SQL Server", "Entity Framework", "Azure"],
+    "images": ["/images/projects/enterprise-app-1.jpg", "/images/projects/enterprise-app-2.jpg"],
+    "featured": true,
+    "category": "web",
+    "startDate": "2023-01-15",
+    "endDate": "2023-12-30"
+  },
+  {
+    "id": "task-management-app",
+    "title": "Task Management Web App",
+    "description": "Full-stack task management application with real-time updates",
+    "longDescription": "A modern task management application built with React frontend and .NET backend. Features real-time collaboration using SignalR, drag-and-drop task organization, team management, and comprehensive reporting dashboard.",
+    "technologies": ["React", "TypeScript", ".NET 8", "SignalR", "PostgreSQL", "Redis", "Tailwind CSS"],
+    "images": ["/images/projects/task-app-1.jpg", "/images/projects/task-app-2.jpg", "/images/projects/task-app-3.jpg"],
+    "liveUrl": "https://taskmanager.demo.com",
+    "githubUrl": "https://github.com/username/task-management",
+    "featured": true,
+    "category": "web",
+    "startDate": "2023-09-01",
+    "endDate": "2024-02-28"
+  },
+  {
+    "id": "inventory-desktop",
+    "title": "Inventory Management System",
+    "description": "Desktop application for warehouse inventory management",
+    "longDescription": "A robust desktop application built with WPF for managing warehouse inventory. Features barcode scanning, automated reorder alerts, comprehensive reporting, and integration with external suppliers' APIs.",
+    "technologies": ["WPF", "C#", ".NET Framework 4.8", "SQL Server", "Entity Framework", "DevExpress"],
+    "images": ["/images/projects/inventory-1.jpg", "/images/projects/inventory-2.jpg"],
+    "githubUrl": "https://github.com/username/inventory-system",
+    "featured": false,
+    "category": "desktop",
+    "startDate": "2023-03-01",
+    "endDate": "2023-08-15"
+  },
+  {
+    "id": "microservices-platform",
+    "title": "Microservices Platform",
+    "description": "Distributed microservices architecture with .NET and Docker",
+    "longDescription": "A scalable microservices platform demonstrating modern distributed architecture patterns. Includes API Gateway, service discovery, distributed logging, monitoring, and automated deployment pipelines.",
+    "technologies": [".NET 8", "Docker", "Kubernetes", "RabbitMQ", "MongoDB", "Elasticsearch", "Grafana", "Ocelot"],
+    "images": ["/images/projects/microservices-1.jpg"],
+    "githubUrl": "https://github.com/username/microservices-platform",
+    "featured": true,
+    "category": "api",
+    "startDate": "2024-07-01"
+  },
+  {
+    "id": "mobile-expense-tracker",
+    "title": "Mobile Expense Tracker",
+    "description": "Cross-platform mobile app for expense tracking",
+    "longDescription": "A cross-platform mobile application built with .NET MAUI for tracking personal and business expenses. Features OCR receipt scanning, category management, budget alerts, and cloud synchronization.",
+    "technologies": [".NET MAUI", "C#", "SQLite", "Azure", "OCR API", "Xamarin.Forms"],
+    "images": ["/images/projects/expense-tracker-1.jpg", "/images/projects/expense-tracker-2.jpg"],
+    "liveUrl": "https://play.google.com/store/apps/details?id=com.expensetracker",
+    "githubUrl": "https://github.com/username/expense-tracker-maui",
+    "featured": false,
+    "category": "mobile",
+    "startDate": "2023-11-01",
+    "endDate": "2024-04-30"
+  }
+]

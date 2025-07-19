@@ -1,0 +1,73 @@
+[
+  {
+    "id": "senior-fullstack-dev",
+    "company": "Current Company",
+    "role": "Senior Full Stack Developer",
+    "startDate": "2020-01-01",
+    "location": "Philippines",
+    "description": "Lead development of enterprise web applications using .NET Core and modern frontend frameworks. Architect scalable solutions and mentor development teams.",
+    "achievements": [
+      "Led development teams in building enterprise-level applications serving thousands of users",
+      "Implemented modern architecture patterns reducing system complexity and improving maintainability",
+      "Optimized application performance resulting in significant improvements in user experience",
+      "Established development best practices and mentored junior developers"
+    ],
+    "technologies": [".NET Core", "C#", "Angular", "React", "TypeScript", "SQL Server", "Azure", "Entity Framework"],
+    "companyLogo": "/images/companies/current.png",
+    "current": true
+  },
+  {
+    "id": "fullstack-developer",
+    "company": "Digital Innovations Inc",
+    "role": "Full Stack Developer",
+    "startDate": "2020-06-15",
+    "endDate": "2022-02-28",
+    "location": "New York, NY",
+    "description": "Developed and maintained multiple web applications using .NET Framework and modern JavaScript frameworks.",
+    "achievements": [
+      "Built an inventory management system serving 500+ concurrent users",
+      "Reduced application load time by 35% through performance optimization",
+      "Implemented automated testing increasing code coverage to 85%",
+      "Collaborated with UX team to improve user satisfaction scores by 25%"
+    ],
+    "technologies": [".NET Core", "C#", "Angular", "Entity Framework", "PostgreSQL", "Redis", "Git"],
+    "companyLogo": "/images/companies/digital-innovations.png",
+    "current": false
+  },
+  {
+    "id": "software-developer",
+    "company": "StartupTech",
+    "role": "Software Developer",
+    "startDate": "2019-01-10",
+    "endDate": "2020-06-10",
+    "location": "San Francisco, CA",
+    "description": "Developed web applications and APIs for early-stage startup focusing on e-commerce solutions.",
+    "achievements": [
+      "Built RESTful APIs handling 10,000+ requests per day",
+      "Implemented payment processing integration with Stripe and PayPal",
+      "Developed responsive web interfaces using modern CSS frameworks",
+      "Participated in agile development process and code reviews"
+    ],
+    "technologies": [".NET Framework", "C#", "JavaScript", "jQuery", "SQL Server", "Bootstrap"],
+    "companyLogo": "/images/companies/startuptech.png",
+    "current": false
+  },
+  {
+    "id": "junior-developer",
+    "company": "WebSolutions LLC",
+    "role": "Junior Software Developer",
+    "startDate": "2018-08-01",
+    "endDate": "2018-12-31",
+    "location": "Chicago, IL",
+    "description": "Entry-level position focused on learning .NET development and contributing to client projects.",
+    "achievements": [
+      "Completed training program in .NET development with distinction",
+      "Contributed to 3 client projects under senior developer guidance",
+      "Fixed 50+ bugs and implemented minor feature enhancements",
+      "Learned industry best practices for code quality and documentation"
+    ],
+    "technologies": [".NET Framework", "C#", "ASP.NET", "SQL Server", "HTML", "CSS", "JavaScript"],
+    "companyLogo": "/images/companies/websolutions.png",
+    "current": false
+  }
+]

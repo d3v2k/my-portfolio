@@ -1,0 +1,170 @@
+[
+  {
+    "name": "C#",
+    "category": "backend",
+    "level": "expert",
+    "icon": "csharp",
+    "yearsOfExperience": 6
+  },
+  {
+    "name": ".NET Core/.NET 8",
+    "category": "backend",
+    "level": "expert",
+    "icon": "dotnet",
+    "yearsOfExperience": 5
+  },
+  {
+    "name": "ASP.NET Core",
+    "category": "backend",
+    "level": "expert",
+    "icon": "aspnet",
+    "yearsOfExperience": 5
+  },
+  {
+    "name": "Entity Framework Core",
+    "category": "backend",
+    "level": "advanced",
+    "icon": "ef",
+    "yearsOfExperience": 4
+  },
+  {
+    "name": "SQL Server",
+    "category": "database",
+    "level": "advanced",
+    "icon": "sqlserver",
+    "yearsOfExperience": 6
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "database",
+    "level": "intermediate",
+    "icon": "postgresql",
+    "yearsOfExperience": 2
+  },
+  {
+    "name": "MongoDB",
+    "category": "database",
+    "level": "intermediate",
+    "icon": "mongodb",
+    "yearsOfExperience": 2
+  },
+  {
+    "name": "React",
+    "category": "frontend",
+    "level": "advanced",
+    "icon": "react",
+    "yearsOfExperience": 4
+  },
+  {
+    "name": "TypeScript",
+    "category": "frontend",
+    "level": "advanced",
+    "icon": "typescript",
+    "yearsOfExperience": 3
+  },
+  {
+    "name": "JavaScript",
+    "category": "frontend",
+    "level": "advanced",
+    "icon": "javascript",
+    "yearsOfExperience": 5
+  },
+  {
+    "name": "HTML5/CSS3",
+    "category": "frontend",
+    "level": "advanced",
+    "icon": "html5",
+    "yearsOfExperience": 6
+  },
+  {
+    "name": "Tailwind CSS",
+    "category": "frontend",
+    "level": "intermediate",
+    "icon": "tailwind",
+    "yearsOfExperience": 2
+  },
+  {
+    "name": "Docker",
+    "category": "tools",
+    "level": "intermediate",
+    "icon": "docker",
+    "yearsOfExperience": 3
+  },
+  {
+    "name": "Kubernetes",
+    "category": "tools",
+    "level": "beginner",
+    "icon": "kubernetes",
+    "yearsOfExperience": 1
+  },
+  {
+    "name": "Azure",
+    "category": "tools",
+    "level": "intermediate",
+    "icon": "azure",
+    "yearsOfExperience": 3
+  },
+  {
+    "name": "Git",
+    "category": "tools",
+    "level": "advanced",
+    "icon": "git",
+    "yearsOfExperience": 6
+  },
+  {
+    "name": "Visual Studio",
+    "category": "tools",
+    "level": "expert",
+    "icon": "visualstudio",
+    "yearsOfExperience": 6
+  },
+  {
+    "name": "VS Code",
+    "category": "tools",
+    "level": "advanced",
+    "icon": "vscode",
+    "yearsOfExperience": 4
+  },
+  {
+    "name": "REST APIs",
+    "category": "backend",
+    "level": "expert",
+    "icon": "api",
+    "yearsOfExperience": 5
+  },
+  {
+    "name": "GraphQL",
+    "category": "backend",
+    "level": "intermediate",
+    "icon": "graphql",
+    "yearsOfExperience": 1
+  },
+  {
+    "name": "SignalR",
+    "category": "backend",
+    "level": "intermediate",
+    "icon": "signalr",
+    "yearsOfExperience": 2
+  },
+  {
+    "name": "xUnit/NUnit",
+    "category": "backend",
+    "level": "advanced",
+    "icon": "testing",
+    "yearsOfExperience": 4
+  },
+  {
+    "name": "Redis",
+    "category": "database",
+    "level": "intermediate",
+    "icon": "redis",
+    "yearsOfExperience": 2
+  },
+  {
+    "name": "RabbitMQ",
+    "category": "tools",
+    "level": "beginner",
+    "icon": "rabbitmq",
+    "yearsOfExperience": 1
+  }
+]
