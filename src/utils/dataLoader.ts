@@ -54,6 +54,38 @@ export function getProjectsByCategory(category: string): Project[] {
   return projects.filter(project => project.category === category);
 }
 
+// Async data loading functions (for components that need loading states)
+export async function loadProjectsData(): Promise<Project[]> {
+  // Simulate async loading for consistency
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(projects), 100);
+  });
+}
+
+export async function loadExperienceData(): Promise<Experience[]> {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(experience), 100);
+  });
+}
+
+export async function loadSkillsData(): Promise<Skill[]> {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(skills), 100);
+  });
+}
+
+export async function loadPersonalData(): Promise<PersonalInfo | null> {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(personalInfo), 100);
+  });
+}
+
+export async function loadSocialData(): Promise<SocialLink[]> {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(socialLinks), 100);
+  });
+}
+
 // Data statistics
 export function getDataStats() {
   return {

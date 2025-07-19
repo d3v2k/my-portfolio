@@ -1,8 +1,29 @@
 {
-  "name": "portfolio",
+  "name": "april-galea-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Professional portfolio website for April Galea - Senior Full Stack .NET Developer",
+  "author": {
+    "name": "April Galea",
+    "email": "april.galea@live.com.ph",
+    "url": "https://your-portfolio-url.com"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "framer-motion",
+    "dotnet-developer",
+    "fullstack-developer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/portfolio.git"
+  },
+  "homepage": "https://your-portfolio-url.com",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
