@@ -201,7 +201,7 @@ export const buttonTap = {
   scale: 0.95,
   transition: {
     duration: 0.1,
-    ease: 'easeInOut',
+    ease: [0.25, 0.46, 0.45, 0.94],
   },
 };
 
