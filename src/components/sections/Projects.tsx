@@ -48,10 +48,10 @@ function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
               src={project.images[0]}
               alt={project.title}
               className="w-full h-full object-cover"
-              onError={(e) => {
-                // Fallback to placeholder if image fails to load
-                e.currentTarget.src = `https://via.placeholder.com/400x200/f3f4f6/6b7280?text=${encodeURIComponent(project.title)}`;
-              }}
+              // onError={(e) => {
+              //   // Fallback to placeholder if image fails to load
+              //   // e.currentTarget.src = `https://via.placeholder.com/400x200/f3f4f6/6b7280?text=${encodeURIComponent(project.title)}`;
+              // }}
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center text-gray-400">
@@ -193,9 +193,9 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                 src={project.images[currentImageIndex]}
                 alt={`${project.title} - Image ${currentImageIndex + 1}`}
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = `https://via.placeholder.com/800x400/f3f4f6/6b7280?text=${encodeURIComponent(project.title)}`;
-                }}
+                // onError={(e) => {
+                //   // e.currentTarget.src = `https://via.placeholder.com/800x400/f3f4f6/6b7280?text=${encodeURIComponent(project.title)}`;
+                // }}
               />
             </div>
             

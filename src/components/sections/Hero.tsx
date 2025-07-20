@@ -145,7 +145,7 @@ export default function Hero() {
             {personalInfo?.resumeUrl && (
               <a
                 href={personalInfo.resumeUrl}
-                download
+                download={"resume.pdf"}
                 className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors duration-200 text-lg font-medium"
               >
                 <Download className="w-5 h-5" />

@@ -1,32 +1,14 @@
 [
   {
     "platform": "GitHub",
-    "url": "https://github.com/johndeveloper",
+    "url": "https://github.com/d3v2k",
     "icon": "github",
-    "username": "johndeveloper"
+    "username": "d3v2k"
   },
   {
     "platform": "LinkedIn",
-    "url": "https://linkedin.com/in/johndeveloper",
+    "url": "https://www.linkedin.com/in/april-galea-4452233b/",
     "icon": "linkedin",
-    "username": "johndeveloper"
-  },
-  {
-    "platform": "Twitter",
-    "url": "https://twitter.com/johndev",
-    "icon": "twitter",
-    "username": "@johndev"
-  },
-  {
-    "platform": "Stack Overflow",
-    "url": "https://stackoverflow.com/users/123456/john-developer",
-    "icon": "stackoverflow",
-    "username": "john-developer"
-  },
-  {
-    "platform": "Dev.to",
-    "url": "https://dev.to/johndeveloper",
-    "icon": "devto",
-    "username": "johndeveloper"
+    "username": "aprilgalea"
   }
 ]

@@ -8,7 +8,7 @@ import type { ContactForm, ValidationError } from '../../types';
 // Contact information data
 const contactInfo = {
   email: 'april.galea@live.com.ph',
-  phone: '+1 (555) 123-4567',
+  phone: '+639175614213',
   location: 'Philippines',
   availability: 'Available for new opportunities'
 };
@@ -16,21 +16,15 @@ const contactInfo = {
 const socialLinks = [
   {
     platform: 'GitHub',
-    url: 'https://github.com/johndeveloper',
+    url: "https://github.com/d3v2k",
     icon: '🔗',
     label: 'View my code repositories'
   },
   {
     platform: 'LinkedIn',
-    url: 'https://linkedin.com/in/johndeveloper',
+    url: 'https://www.linkedin.com/in/april-galea-4452233b/',
     icon: '💼',
     label: 'Connect on LinkedIn'
-  },
-  {
-    platform: 'Twitter',
-    url: 'https://twitter.com/johndev',
-    icon: '🐦',
-    label: 'Follow on Twitter'
   }
 ];
 

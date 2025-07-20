@@ -4,7 +4,7 @@
     "category": "backend",
     "level": "expert",
     "icon": "csharp",
-    "yearsOfExperience": 6
+    "yearsOfExperience": 12
   },
   {
     "name": ".NET Core/.NET 8",
@@ -25,14 +25,14 @@
     "category": "backend",
     "level": "advanced",
     "icon": "ef",
-    "yearsOfExperience": 4
+    "yearsOfExperience": 8
   },
   {
     "name": "SQL Server",
     "category": "database",
     "level": "advanced",
     "icon": "sqlserver",
-    "yearsOfExperience": 6
+    "yearsOfExperience": 12
   },
   {
     "name": "PostgreSQL",
@@ -42,59 +42,59 @@
     "yearsOfExperience": 2
   },
   {
-    "name": "MongoDB",
-    "category": "database",
-    "level": "intermediate",
-    "icon": "mongodb",
+    "name": "React",
+    "category": "frontend",
+    "level": "beginner",
+    "icon": "react",
     "yearsOfExperience": 2
   },
   {
-    "name": "React",
+    "name": "Angular",
     "category": "frontend",
     "level": "advanced",
-    "icon": "react",
-    "yearsOfExperience": 4
+    "icon": "angular",
+    "yearsOfExperience": 6
   },
   {
     "name": "TypeScript",
     "category": "frontend",
     "level": "advanced",
     "icon": "typescript",
-    "yearsOfExperience": 3
+    "yearsOfExperience": 6
   },
   {
     "name": "JavaScript",
     "category": "frontend",
     "level": "advanced",
     "icon": "javascript",
-    "yearsOfExperience": 5
+    "yearsOfExperience": 12
   },
   {
     "name": "HTML5/CSS3",
     "category": "frontend",
     "level": "advanced",
     "icon": "html5",
-    "yearsOfExperience": 6
+    "yearsOfExperience": 12
   },
   {
     "name": "Tailwind CSS",
     "category": "frontend",
     "level": "intermediate",
     "icon": "tailwind",
-    "yearsOfExperience": 2
+    "yearsOfExperience": 1
+  },
+  {
+    "name": "Bootstrap CSS",
+    "category": "frontend",
+    "level": "expert",
+    "icon": "bootstrap",
+    "yearsOfExperience": 8
   },
   {
     "name": "Docker",
     "category": "tools",
     "level": "intermediate",
     "icon": "docker",
-    "yearsOfExperience": 3
-  },
-  {
-    "name": "Kubernetes",
-    "category": "tools",
-    "level": "beginner",
-    "icon": "kubernetes",
     "yearsOfExperience": 1
   },
   {
@@ -102,49 +102,49 @@
     "category": "tools",
     "level": "intermediate",
     "icon": "azure",
-    "yearsOfExperience": 3
+    "yearsOfExperience": 5
   },
   {
     "name": "Git",
     "category": "tools",
     "level": "advanced",
     "icon": "git",
-    "yearsOfExperience": 6
+    "yearsOfExperience": 8
   },
   {
     "name": "Visual Studio",
     "category": "tools",
     "level": "expert",
     "icon": "visualstudio",
-    "yearsOfExperience": 6
+    "yearsOfExperience": 12
   },
   {
     "name": "VS Code",
     "category": "tools",
     "level": "advanced",
     "icon": "vscode",
-    "yearsOfExperience": 4
+    "yearsOfExperience": 6
   },
   {
     "name": "REST APIs",
     "category": "backend",
     "level": "expert",
     "icon": "api",
-    "yearsOfExperience": 5
+    "yearsOfExperience": 10
   },
   {
-    "name": "GraphQL",
-    "category": "backend",
+    "name": "MySQL",
+    "category": "database",
     "level": "intermediate",
-    "icon": "graphql",
-    "yearsOfExperience": 1
+    "icon": "mysql",
+    "yearsOfExperience": 6
   },
   {
     "name": "SignalR",
     "category": "backend",
     "level": "intermediate",
     "icon": "signalr",
-    "yearsOfExperience": 2
+    "yearsOfExperience": 8
   },
   {
     "name": "xUnit/NUnit",
@@ -158,13 +158,6 @@
     "category": "database",
     "level": "intermediate",
     "icon": "redis",
-    "yearsOfExperience": 2
-  },
-  {
-    "name": "RabbitMQ",
-    "category": "tools",
-    "level": "beginner",
-    "icon": "rabbitmq",
     "yearsOfExperience": 1
   }
 ]

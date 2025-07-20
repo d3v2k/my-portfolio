@@ -37,7 +37,7 @@ export default function About() {
 
   const highlights = [
     'Expert in .NET Core/8, C#, and modern web technologies',
-    'Proficient in React, TypeScript, and responsive design',
+    'Proficient in Angular, React, TypeScript, and responsive design',
     'Experience with cloud platforms (Azure) and DevOps practices',
     'Strong background in database design and optimization',
     'Passionate about clean code and test-driven development',
