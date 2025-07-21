@@ -58,6 +58,7 @@ export default function OptimizedImage({
         document.head.removeChild(preloadLink);
       };
     }
+    return () => {}; // Return empty cleanup function for non-priority images
   }, [optimizedSrc, priority]);
   
   // If error, show placeholder
