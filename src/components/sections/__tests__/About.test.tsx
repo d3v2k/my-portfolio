@@ -75,7 +75,7 @@ describe('About', () => {
     
     expect(screen.getByText('What I Bring to the Table')).toBeInTheDocument();
     expect(screen.getByText(/Expert in \.NET Core\/8, C#, and modern web technologies/)).toBeInTheDocument();
-    expect(screen.getByText(/Proficient in React, TypeScript, and responsive design/)).toBeInTheDocument();
+    expect(screen.getByText(/Proficient in Angular, React, TypeScript, and responsive design/)).toBeInTheDocument();
   });
 
   it('shows achievement statistics', () => {

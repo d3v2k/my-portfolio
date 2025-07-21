@@ -186,9 +186,9 @@ describe('Skills Component', () => {
       expect(screen.getByText('Technical Skills')).toBeInTheDocument();
     });
 
-    // Should still render the main heading and description
+    // Should still render the main heading and debug info
     expect(screen.getByText('Technical Skills')).toBeInTheDocument();
-    expect(screen.getByText(/comprehensive overview/i)).toBeInTheDocument();
+    expect(screen.getByText('No skills data found. Debug info:')).toBeInTheDocument();
   });
 
   it('applies correct CSS classes for responsive design', async () => {

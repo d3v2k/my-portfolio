@@ -7,10 +7,10 @@ interface SmoothScrollOptions {
 }
 
 // Easing functions
-const easeInOutCubic = (t: number): number => 
+const easeInOutCubic = (t: number): number =>
   t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
-const easeOutQuart = (t: number): number => 
+const easeOutQuart = (t: number): number =>
   1 - Math.pow(1 - t, 4);
 
 /**
@@ -29,7 +29,7 @@ export function useSmoothScroll(defaultOptions?: SmoothScrollOptions) {
     } = { ...defaultOptions, ...options };
 
     // Get the target element
-    const targetElement = typeof target === 'string' 
+    const targetElement = typeof target === 'string'
       ? document.getElementById(target)
       : target;
 

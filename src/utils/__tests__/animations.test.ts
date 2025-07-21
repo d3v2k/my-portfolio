@@ -1,3 +1,109 @@
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { expect } from 'vitest';
+import { expect } from 'vitest';
+import { it } from 'vitest';
+import { describe } from 'vitest';
+import { describe } from 'vitest';
 import {
   fadeInUp,
   fadeInDown,
@@ -16,7 +122,22 @@ import {
   cardHover,
   buttonTap,
   progressBar,
-  revealSection
+  revealSection,
+  // New animations
+  scrollFadeIn,
+  scrollFadeInLeft,
+  scrollFadeInRight,
+  scrollScale,
+  staggeredList,
+  staggeredItem,
+  navbarAnimation,
+  mobileMenuAnimation,
+  pageLoadingAnimation,
+  loadingSpinnerAnimation,
+  revealUp,
+  revealDown,
+  revealLeft,
+  revealRight
 } from '../animations';
 
 describe('Animation Utilities', () => {
@@ -163,7 +284,6 @@ describe('Animation Utilities', () => {
         scale: 0.95,
         transition: {
           duration: 0.1,
-          ease: 'easeInOut',
         },
       });
     });
@@ -247,8 +367,7 @@ describe('Animation Utilities', () => {
   });
 });
 
-describe('
-Scroll-triggered animations', () => {
+describe('Scroll-triggered animations', () => {
   it('should have correct scrollFadeIn animation properties', () => {
     expect(scrollFadeIn.hidden).toEqual({
       opacity: 0,

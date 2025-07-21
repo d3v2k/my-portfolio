@@ -64,6 +64,16 @@ describe('Header', () => {
   });
 
   it('closes mobile menu when navigation item is clicked', () => {
+    // Mock the AnimatePresence component to immediately remove elements
+    vi.mock('framer-motion', () => ({
+      motion: {
+        header: ({ children, ...props }: any) => <header {...props}>{children}</header>,
+        div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+        button: ({ children, ...props }: any) => <button {...props}>{children}</button>,
+      },
+      AnimatePresence: ({ children }: any) => <>{children}</>,
+    }));
+
     render(<Header />);
     
     // Open mobile menu
@@ -77,7 +87,8 @@ describe('Header', () => {
       fireEvent.click(navItem);
     }
     
-    // Mobile nav should be closed (not in document)
+    // Since we're testing the state change, not the animation,
+    // we can check if the state was updated correctly
     expect(screen.queryByTestId('mobile-nav')).not.toBeInTheDocument();
   });
 });
