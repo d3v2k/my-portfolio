@@ -246,3 +246,165 @@ describe('Animation Utilities', () => {
     });
   });
 });
+
+describe('
+Scroll-triggered animations', () => {
+  it('should have correct scrollFadeIn animation properties', () => {
+    expect(scrollFadeIn.hidden).toEqual({
+      opacity: 0,
+      y: 30,
+    });
+    expect(scrollFadeIn.visible).toMatchObject({
+      opacity: 1,
+      y: 0,
+    });
+  });
+
+  it('should have correct scrollFadeInLeft animation properties', () => {
+    expect(scrollFadeInLeft.hidden).toEqual({
+      opacity: 0,
+      x: -50,
+    });
+    expect(scrollFadeInLeft.visible).toMatchObject({
+      opacity: 1,
+      x: 0,
+    });
+  });
+
+  it('should have correct scrollFadeInRight animation properties', () => {
+    expect(scrollFadeInRight.hidden).toEqual({
+      opacity: 0,
+      x: 50,
+    });
+    expect(scrollFadeInRight.visible).toMatchObject({
+      opacity: 1,
+      x: 0,
+    });
+  });
+
+  it('should have correct scrollScale animation properties', () => {
+    expect(scrollScale.hidden).toEqual({
+      opacity: 0,
+      scale: 0.8,
+    });
+    expect(scrollScale.visible).toMatchObject({
+      opacity: 1,
+      scale: 1,
+    });
+  });
+});
+
+describe('Staggered animations', () => {
+  it('should have correct staggeredList animation properties', () => {
+    expect(staggeredList.hidden).toEqual({});
+    expect(staggeredList.visible).toMatchObject({
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    });
+  });
+
+  it('should have correct staggeredItem animation properties', () => {
+    expect(staggeredItem.hidden).toEqual({
+      opacity: 0,
+      y: 20,
+    });
+    expect(staggeredItem.visible).toMatchObject({
+      opacity: 1,
+      y: 0,
+    });
+  });
+});
+
+describe('Navigation animations', () => {
+  it('should have correct navbarAnimation properties', () => {
+    expect(navbarAnimation.hidden).toEqual({
+      y: -100,
+      opacity: 0,
+    });
+    expect(navbarAnimation.visible).toMatchObject({
+      y: 0,
+      opacity: 1,
+    });
+  });
+
+  it('should have correct mobileMenuAnimation properties', () => {
+    expect(mobileMenuAnimation.hidden).toEqual({
+      height: 0,
+      opacity: 0,
+    });
+    expect(mobileMenuAnimation.visible).toMatchObject({
+      height: 'auto',
+      opacity: 1,
+    });
+  });
+});
+
+describe('Page loading animations', () => {
+  it('should have correct pageLoadingAnimation properties', () => {
+    expect(pageLoadingAnimation.hidden).toEqual({
+      opacity: 0,
+    });
+    expect(pageLoadingAnimation.visible).toMatchObject({
+      opacity: 1,
+    });
+  });
+
+  it('should have correct loadingSpinnerAnimation properties', () => {
+    expect(loadingSpinnerAnimation.animate).toMatchObject({
+      rotate: 360,
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        ease: 'linear',
+      },
+    });
+  });
+});
+
+describe('Section reveal animations', () => {
+  it('should have correct revealUp animation properties', () => {
+    expect(revealUp.hidden).toEqual({
+      opacity: 0,
+      y: 50,
+    });
+    expect(revealUp.visible).toMatchObject({
+      opacity: 1,
+      y: 0,
+    });
+  });
+
+  it('should have correct revealDown animation properties', () => {
+    expect(revealDown.hidden).toEqual({
+      opacity: 0,
+      y: -50,
+    });
+    expect(revealDown.visible).toMatchObject({
+      opacity: 1,
+      y: 0,
+    });
+  });
+
+  it('should have correct revealLeft animation properties', () => {
+    expect(revealLeft.hidden).toEqual({
+      opacity: 0,
+      x: -50,
+    });
+    expect(revealLeft.visible).toMatchObject({
+      opacity: 1,
+      x: 0,
+    });
+  });
+
+  it('should have correct revealRight animation properties', () => {
+    expect(revealRight.hidden).toEqual({
+      opacity: 0,
+      x: 50,
+    });
+    expect(revealRight.visible).toMatchObject({
+      opacity: 1,
+      x: 0,
+    });
+  });
+});
