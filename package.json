@@ -34,7 +34,9 @@
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "preview": "vite preview"
+    "test:performance": "node lighthouse-audit.js",
+    "preview": "vite preview",
+    "analyze": "vite build --mode analyze"
   },
   "dependencies": {
     "@types/node": "^24.0.15",

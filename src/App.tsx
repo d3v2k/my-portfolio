@@ -1,25 +1,52 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/layout/Header';
-import Hero from './components/sections/Hero';
-import About from './components/sections/About';
-import Skills from './components/sections/Skills';
-import Experience from './components/sections/Experience';
-import Projects from './components/sections/Projects';
-import Contact from './components/sections/Contact';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/ui/ScrollToTop';
+
+// Lazy load section components
+const Hero = lazy(() => import('./components/sections/Hero'));
+const About = lazy(() => import('./components/sections/About'));
+const Skills = lazy(() => import('./components/sections/Skills'));
+const Experience = lazy(() => import('./components/sections/Experience'));
+const Projects = lazy(() => import('./components/sections/Projects'));
+const Contact = lazy(() => import('./components/sections/Contact'));
+
+// Skeleton loader for sections
+function SectionSkeleton() {
+  return (
+    <div className="py-16 px-4 max-w-7xl mx-auto">
+      <div className="animate-pulse">
+        <div className="h-8 bg-gray-200 rounded w-3/4 mx-auto mb-8"></div>
+        <div className="h-4 bg-gray-200 rounded w-1/2 mx-auto mb-12"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="h-48 bg-gray-200 rounded"></div>
+          <div className="h-48 bg-gray-200 rounded"></div>
+          <div className="h-48 bg-gray-200 rounded"></div>
+          <div className="h-48 bg-gray-200 rounded"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time (remove in production and use actual asset loading)
-    const timer = setTimeout(() => {
+    // Use actual asset loading instead of timeout
+    const handleLoad = () => {
       setIsLoading(false);
-    }, 1000);
+    };
 
-    return () => clearTimeout(timer);
+    // Check if document is already loaded
+    if (document.readyState === 'complete') {
+      handleLoad();
+      return () => {}; // Return empty cleanup function for consistency
+    } else {
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
   }, []);
 
   // Animation variants for page loading
@@ -115,7 +142,9 @@ function App() {
             viewport={{ once: true }}
             variants={sectionVariants}
           >
-            <Hero />
+            <Suspense fallback={<SectionSkeleton />}>
+              <Hero />
+            </Suspense>
           </motion.section>
           
           <motion.section 
@@ -125,7 +154,9 @@ function App() {
             viewport={{ once: true, margin: "-100px" }}
             variants={sectionVariants}
           >
-            <About />
+            <Suspense fallback={<SectionSkeleton />}>
+              <About />
+            </Suspense>
           </motion.section>
           
           <motion.section 
@@ -135,7 +166,9 @@ function App() {
             viewport={{ once: true, margin: "-100px" }}
             variants={sectionVariants}
           >
-            <Skills />
+            <Suspense fallback={<SectionSkeleton />}>
+              <Skills />
+            </Suspense>
           </motion.section>
           
           <motion.section 
@@ -145,7 +178,9 @@ function App() {
             viewport={{ once: true, margin: "-100px" }}
             variants={sectionVariants}
           >
-            <Experience />
+            <Suspense fallback={<SectionSkeleton />}>
+              <Experience />
+            </Suspense>
           </motion.section>
           
           <motion.section 
@@ -155,7 +190,9 @@ function App() {
             viewport={{ once: true, margin: "-100px" }}
             variants={sectionVariants}
           >
-            <Projects />
+            <Suspense fallback={<SectionSkeleton />}>
+              <Projects />
+            </Suspense>
           </motion.section>
           
           <motion.section 
@@ -165,7 +202,9 @@ function App() {
             viewport={{ once: true, margin: "-100px" }}
             variants={sectionVariants}
           >
-            <Contact />
+            <Suspense fallback={<SectionSkeleton />}>
+              <Contact />
+            </Suspense>
           </motion.section>
         </main>
         <Footer />

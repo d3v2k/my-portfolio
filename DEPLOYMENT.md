@@ -147,20 +147,57 @@ VITE_LINKEDIN_URL=https://linkedin.com/in/your-profile
 ```bash
 # Analyze bundle size
 npm run build
-npx vite-bundle-analyzer dist
+npm run analyze
+
+# Run Lighthouse audit
+npm run build
+npm run preview
+# In a separate terminal
+npm run test:performance
 
 # Check for unused dependencies
 npx depcheck
 ```
 
+### Performance Features Implemented
+
+- [x] **Lazy Loading**
+  - React.lazy and Suspense for component code splitting
+  - Loading attribute for images
+  - Intersection Observer for on-demand loading
+
+- [x] **Image Optimization**
+  - WebP format with browser detection
+  - Responsive images with srcset and sizes attributes
+  - Optimized image component with fallbacks
+  - Placeholder loading states
+
+- [x] **Code Splitting**
+  - Route-based code splitting
+  - Component-level code splitting
+  - Vendor bundle separation
+  - Dynamic imports for heavy components
+
+- [x] **Caching Strategy**
+  - Service worker implementation
+  - Static asset caching
+  - Offline capability
+  - Cache invalidation strategy
+
+- [x] **Build Optimization**
+  - Tree shaking for unused code
+  - Minification and compression
+  - Bundle size analysis
+  - Critical CSS extraction
+
 ### Performance Checklist
 
-- [ ] **Images optimized** (WebP format, proper sizing)
-- [ ] **Code splitting** implemented
-- [ ] **Lazy loading** for components
-- [ ] **Service worker** for caching
-- [ ] **Gzip compression** enabled
-- [ ] **CDN** configured for assets
+- [x] **Images optimized** (WebP format, responsive sizing)
+- [x] **Code splitting** implemented with React.lazy
+- [x] **Lazy loading** for components and images
+- [x] **Service worker** for caching and offline capability
+- [ ] **Gzip/Brotli compression** enabled (configured at hosting level)
+- [ ] **CDN** configured for assets (configured at hosting level)
 
 ## 🔍 Monitoring and Analytics
 

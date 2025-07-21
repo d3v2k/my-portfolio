@@ -40,7 +40,7 @@ export function useSmoothScroll(defaultOptions?: SmoothScrollOptions) {
     let startPosition = window.scrollY;
     try {
       targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
-    } catch (error) {
+    } catch {
       // Fallback for test environment
       startPosition = window.scrollY || 0;
       targetPosition = (targetElement.offsetTop || 0) - offset;

@@ -37,7 +37,12 @@ A modern, responsive portfolio website showcasing the skills, experience, and pr
 
 ### 🔧 Technical Features
 - **TypeScript**: Full type safety throughout the application
-- **Performance Optimized**: Lazy loading, code splitting, and optimized bundle sizes
+- **Performance Optimized**: 
+  - Lazy loading for components and images
+  - Code splitting with dynamic imports
+  - WebP image optimization with responsive sizing
+  - Service worker for offline capability and caching
+  - Optimized bundle sizes with tree shaking
 - **SEO Ready**: Proper meta tags, semantic HTML, and search engine optimization
 - **Accessibility**: WCAG 2.1 AA compliant with keyboard navigation and screen reader support
 - **Testing**: Comprehensive test suite with 75+ passing tests
@@ -261,9 +266,34 @@ npm run build
 The portfolio is optimized for performance with:
 
 - **Lighthouse Score**: 95+ across all metrics
-- **Bundle Size**: Optimized with code splitting
+- **Bundle Size**: Optimized with code splitting and tree shaking
 - **Loading Speed**: < 3 seconds on 3G networks
-- **SEO Optimization**: Proper meta tags and structured data
+- **Image Optimization**:
+  - WebP format with fallbacks for older browsers
+  - Responsive sizing with srcset attributes
+  - Lazy loading for non-critical images
+  - Image placeholders during loading
+- **Code Optimization**:
+  - Component lazy loading with React.lazy and Suspense
+  - Route-based code splitting
+  - Tree shaking for unused code elimination
+- **Caching Strategy**:
+  - Service worker for offline capability
+  - Static asset caching
+  - Optimized cache headers
+- **Performance Testing**:
+  - Lighthouse audit validation
+  - Bundle size analysis
+  - Loading performance metrics
+
+Run the Lighthouse audit with:
+```bash
+# Build the project first
+npm run build
+npm run preview
+# In a separate terminal
+node lighthouse-audit.js
+```
 
 ## 🤝 Contributing
 

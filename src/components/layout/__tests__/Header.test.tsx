@@ -1,10 +1,11 @@
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { vi } from 'vitest';
+import { vi, describe, beforeEach, it, expect } from 'vitest';
 import Header from '../Header';
 
 // Mock the Navigation component
 vi.mock('../Navigation', () => ({
-  default: ({ isMobile, onItemClick }: any) => (
+  default: ({ isMobile, onItemClick }: { isMobile?: boolean; onItemClick?: () => void }) => (
     <div data-testid={isMobile ? 'mobile-nav' : 'desktop-nav'}>
       <button onClick={onItemClick}>Mock Nav Item</button>
     </div>
@@ -67,11 +68,14 @@ describe('Header', () => {
     // Mock the AnimatePresence component to immediately remove elements
     vi.mock('framer-motion', () => ({
       motion: {
-        header: ({ children, ...props }: any) => <header {...props}>{children}</header>,
-        div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-        button: ({ children, ...props }: any) => <button {...props}>{children}</button>,
+        header: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown }) => 
+          <header {...props}>{children}</header>,
+        div: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown }) => 
+          <div {...props}>{children}</div>,
+        button: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown }) => 
+          <button {...props}>{children}</button>,
       },
-      AnimatePresence: ({ children }: any) => <>{children}</>,
+      AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
     }));
 
     render(<Header />);

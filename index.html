@@ -4,7 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="April Galea - Senior Full Stack .NET Developer Portfolio showcasing projects, skills, and professional experience" />
+    <meta name="theme-color" content="#3B82F6" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
     <title>April Galea - Portfolio</title>
+    <!-- WebP detection script -->
+    <script>
+      // Check for WebP support
+      const checkWebpSupport = () => {
+        const elem = document.createElement('canvas');
+        if (elem.getContext && elem.getContext('2d')) {
+          return elem.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+        }
+        return false;
+      };
+      
+      // Add class to HTML element based on WebP support
+      document.documentElement.classList.add(
+        checkWebpSupport() ? 'webp' : 'no-webp'
+      );
+    </script>
   </head>
   <body>
     <div id="root"></div>

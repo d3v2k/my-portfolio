@@ -4,6 +4,7 @@ import { ExternalLink, Github, Calendar, Filter } from 'lucide-react';
 import Card from '../ui/Card';
 import Button from '../ui/Button';
 import Modal from '../ui/Modal';
+import OptimizedImage from '../ui/OptimizedImage';
 import { fadeInUp, staggerContainer } from '../../utils/animations';
 import { projects } from '../../utils/dataLoader';
 import type { Project } from '../../types';
@@ -44,14 +45,11 @@ function ProjectCard({ project, onViewDetails }: ProjectCardProps) {
         {/* Project Image */}
         <div className="relative h-48 mb-4 bg-gray-100 rounded-lg overflow-hidden">
           {project.images.length > 0 ? (
-            <img
+            <OptimizedImage
               src={project.images[0]}
               alt={project.title}
               className="w-full h-full object-cover"
-              // onError={(e) => {
-              //   // Fallback to placeholder if image fails to load
-              //   // e.currentTarget.src = `https://via.placeholder.com/400x200/f3f4f6/6b7280?text=${encodeURIComponent(project.title)}`;
-              // }}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center text-gray-400">
@@ -189,13 +187,12 @@ function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
         {project.images.length > 0 && (
           <div className="relative">
             <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden">
-              <img
+              <OptimizedImage
                 src={project.images[currentImageIndex]}
                 alt={`${project.title} - Image ${currentImageIndex + 1}`}
                 className="w-full h-full object-cover"
-                // onError={(e) => {
-                //   // e.currentTarget.src = `https://via.placeholder.com/800x400/f3f4f6/6b7280?text=${encodeURIComponent(project.title)}`;
-                // }}
+                sizes="(max-width: 768px) 100vw, 800px"
+                priority={true}
               />
             </div>
             
