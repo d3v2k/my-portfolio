@@ -2,13 +2,12 @@
   {
     "id": "senior-fullstack-dev",
     "company": "DebtCol",
-    "role": "Full Stack .Net  Developer",
-    "startDate": "2023-07-01",
-    "location": "Philippines",
-    "description": "Developed and maintained web applications using .NET Framework and modern JavaScript frameworks.",
+    "role": ".NET Developer",
+    "startDate": "2020-10-19",
+    "location": "Australia",
+    "description": "Developed and maintained web applications using .NET Core and modern JavaScript frameworks for debt collection software.",
     "achievements": [
-      "Designed and implemented web applications using ASP.NET Core, Angular 8, and REST APIs.",
-      "Developed and deployed scalable microservices on Azure Functions for debt collection automation.",
+      "Designed and implemented web applications using .NET Core 6, Angular 8, and REST APIs.",
       "Integrated third-party APIs and improved system performance by optimizing SQL queries and backend logic."
     ],
     "technologies": [".NET Core", "C#", "Angular", "React", "TypeScript", "SQL Server", "Azure", "Entity Framework"],
@@ -17,17 +16,33 @@
   },
   {
     "id": "fullstack-developer",
+    "company": "KWP Group",
+    "role": ".NET Developer",
+    "startDate": "2019/03/01",
+    "endDate": "2020/07/01",
+    "location": "Australia",
+    "description": "Built marketing and healthcare platforms using Angular 6, ReactJS, and GatsbyJS",
+    "achievements": [
+      "Created serverless functions on Azure to automate campaign workflows via IBM Acoustic",
+      "Contributed to full-stack development and CI/CD implementation using Azure DevOps"
+    ],
+    "technologies": [".NET Core", "C#", "Azure", "Entity Framework", "Git", "Angular", "NextJS", "React"],
+    "companyLogo": "/images/companies/digital-innovations.png",
+    "current": false
+  },
+  {
+    "id": "fullstack-developer",
     "company": "Crimcheck",
-    "role": ".Net Developer",
+    "role": ".NET Developer",
     "startDate": "2016/11/01",
     "endDate": "2023/07/23",
-    "location": "Philippines",
+    "location": "Unite States",
     "description": "Developed and maintained web applications using .NET Framework for background check services.",
     "achievements": [
-      "Built an inventory management system serving 500+ concurrent users",
-      "Reduced application load time by 35% through performance optimization",
-      "Implemented automated testing increasing code coverage to 85%",
-      "Collaborated with UX team to improve user satisfaction scores by 25%"
+      "Reduced system down time and improved maintainability by implementing a modular architecture",
+      "Optimized backend services and integrated DevArt ORM with Entity Framework for data access",
+      "Built microservices using Azure Service Bus and message queues",
+      "Implemented Azure Key Vault for secure key encryption"
     ],
     "technologies": [".NET Core", "C#", "Azure", "Bootsrap", "Entity Framework", "MySQL", "Git", "AngularJS"],
     "companyLogo": "/images/companies/digital-innovations.png",
@@ -36,7 +51,7 @@
   {
     "id": "software-developer",
     "company": "Magenic Manila",
-    "role": ".Net Developer",
+    "role": ".NET Developer",
     "startDate": "2015-03-01",
     "endDate": "2016-11-01",
     "location": "Makati, Philippines",
@@ -59,8 +74,7 @@
     "location": "Makati, Philippines",
     "description": "Developed enterprise apps using ASP.NET MVC, C#, JavaScript, and Microsoft SQL Server",
     "achievements": [
-      "Implemented and maintained Salesforce API integrations to streamline CRM data sync.",
-      "Wrote and executed test cases to validate system integrity before deployments."
+      "Implemented and maintained Salesforce API integrations to streamline CRM data sync."
     ],
     "technologies": [".NET Framework", "C#", "ASP.NET", "SQL Server", "HTML", "CSS", "JavaScript"],
     "companyLogo": "/images/companies/websolutions.png",

@@ -12,7 +12,7 @@ export default function About() {
     {
       icon: <Code className="w-6 h-6" />,
       title: 'Years of Experience',
-      value: '6+',
+      value: '12+',
       description: 'Building scalable web applications'
     },
     {
@@ -31,7 +31,7 @@ export default function About() {
       icon: <Coffee className="w-6 h-6" />,
       title: 'Current Role',
       value: stats.currentRole.split(' ').slice(0, 2).join(' '),
-      description: 'Leading development teams'
+      description: 'A team contributor'
     }
   ];
 

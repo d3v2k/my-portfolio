@@ -9,7 +9,7 @@ const Hero = lazy(() => import('./components/sections/Hero'));
 const About = lazy(() => import('./components/sections/About'));
 const Skills = lazy(() => import('./components/sections/Skills'));
 const Experience = lazy(() => import('./components/sections/Experience'));
-const Projects = lazy(() => import('./components/sections/Projects'));
+// const Projects = lazy(() => import('./components/sections/Projects'));
 const Contact = lazy(() => import('./components/sections/Contact'));
 
 // Skeleton loader for sections
@@ -183,7 +183,7 @@ function App() {
             </Suspense>
           </motion.section>
           
-          <motion.section 
+          {/* <motion.section 
             id="projects"
             initial="hidden"
             whileInView="visible"
@@ -193,7 +193,7 @@ function App() {
             <Suspense fallback={<SectionSkeleton />}>
               <Projects />
             </Suspense>
-          </motion.section>
+          </motion.section> */}
           
           <motion.section 
             id="contact"

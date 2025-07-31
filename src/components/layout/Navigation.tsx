@@ -20,7 +20,7 @@ export default function Navigation({ isMobile = false, onItemClick }: Navigation
     // Use our custom smooth scroll instead of native scrollIntoView
     scrollToElement(id, { 
       offset: 80,
-      duration: 800
+      duration: 100
     });
     
     // Call the onItemClick callback if provided (for mobile menu closing)

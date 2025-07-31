@@ -24,18 +24,18 @@ vi.mock('lucide-react', () => ({
 // Mock the data loader
 vi.mock('../../../utils/dataLoader', () => ({
   personalInfo: {
-    name: 'John Developer',
-    title: 'Senior Full Stack .NET Developer',
-    email: 'john.developer@email.com',
-    location: 'Remote, USA',
-    summary: 'Passionate full stack .NET developer with 6+ years of experience building scalable web applications and APIs.',
-    resumeUrl: '/documents/John_Developer_Resume.pdf'
+    name: 'April Galea',
+    title: 'Full Stack .NET Developer',
+    email: 'april.galea@live.com.ph',
+    location: 'Philippines',
+    summary: 'Passionate full stack .NET developer with 12+ years of experience building scalable web applications and APIs.',
+    resumeUrl: '/documents/resume.zip'
   },
   getDataStats: () => ({
     totalProjects: 5,
     featuredProjects: 3,
     totalExperience: 4,
-    currentRole: 'Senior Full Stack Developer',
+    currentRole: '.Net Developer',
     totalSkills: 24,
     skillCategories: 4,
     socialPlatforms: 5
@@ -67,7 +67,7 @@ describe('About', () => {
     render(<About />);
     
     expect(screen.getByText('About Me')).toBeInTheDocument();
-    expect(screen.getByText('Passionate full stack .NET developer with 6+ years of experience building scalable web applications and APIs.')).toBeInTheDocument();
+    expect(screen.getByText('Passionate full stack .NET developer with 12+ years of experience building scalable web applications and APIs.')).toBeInTheDocument();
   });
 
   it('displays professional highlights', () => {
@@ -81,7 +81,7 @@ describe('About', () => {
   it('shows achievement statistics', () => {
     render(<About />);
     
-    expect(screen.getByText('6+')).toBeInTheDocument();
+    expect(screen.getByText('12+')).toBeInTheDocument();
     expect(screen.getByText('Years of Experience')).toBeInTheDocument();
     expect(screen.getByText('5')).toBeInTheDocument();
     expect(screen.getByText('Projects Completed')).toBeInTheDocument();
@@ -93,8 +93,8 @@ describe('About', () => {
     render(<About />);
     
     expect(screen.getByText("Let's Connect")).toBeInTheDocument();
-    expect(screen.getByText('john.developer@email.com')).toBeInTheDocument();
-    expect(screen.getByText('Remote, USA')).toBeInTheDocument();
+    expect(screen.getByText('april.galea@live.com.ph')).toBeInTheDocument();
+    expect(screen.getByText('Philippines')).toBeInTheDocument();
     expect(screen.getByText('Available for new opportunities')).toBeInTheDocument();
   });
 
@@ -102,16 +102,16 @@ describe('About', () => {
     render(<About />);
     
     const resumeLink = screen.getByText('Download Resume').closest('a');
-    expect(resumeLink).toHaveAttribute('href', '/documents/John_Developer_Resume.pdf');
+    expect(resumeLink).toHaveAttribute('href', '/documents/resume.zip');
     expect(resumeLink).toHaveAttribute('download');
   });
 
   it('displays professional avatar with initials', () => {
     render(<About />);
     
-    expect(screen.getByText('JD')).toBeInTheDocument();
-    expect(screen.getByText('John Developer')).toBeInTheDocument();
-    expect(screen.getByText('Senior Full Stack .NET Developer')).toBeInTheDocument();
+    expect(screen.getByText('AG')).toBeInTheDocument();
+    expect(screen.getByText('April Galea')).toBeInTheDocument();
+    expect(screen.getByText('.Net Developer')).toBeInTheDocument();
   });
 
   it('has proper responsive grid layout', () => {
@@ -133,14 +133,13 @@ describe('About', () => {
   it('renders email as clickable mailto link', () => {
     render(<About />);
     
-    const emailLink = screen.getByText('john.developer@email.com');
-    expect(emailLink.closest('a')).toHaveAttribute('href', 'mailto:john.developer@email.com');
+    const emailLink = screen.getByText('april.galea@live.com.ph');
+    expect(emailLink.closest('a')).toHaveAttribute('href', 'mailto:april.galea@live.com.ph');
   });
 
   it('displays current role information', () => {
     render(<About />);
     
-    expect(screen.getByText('Senior Full')).toBeInTheDocument();
-    expect(screen.getByText('Leading development teams')).toBeInTheDocument();
+    expect(screen.getByText('.Net Developer')).toBeInTheDocument();
   });
 });

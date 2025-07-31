@@ -13,8 +13,7 @@ export default function Hero() {
     'Full Stack .NET Developer',
     'Angular Developer',
     'Software Engineer',
-    'API Developer',
-    'Problem Solver'
+    'API Developer'
   ];
 
   const currentRole = roles[currentIndex];
@@ -53,12 +52,12 @@ export default function Hero() {
     }
   };
 
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  // const scrollToProjects = () => {
+  //   const projectsSection = document.getElementById('projects');
+  //   if (projectsSection) {
+  //     projectsSection.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   return (
     <section 
@@ -127,12 +126,12 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
-            <button
+            {/* <button
               onClick={scrollToProjects}
               className="btn-primary flex items-center gap-2 text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
             >
-              View My Work
-            </button>
+              View My Experience
+            </button> */}
             
             <button
               onClick={scrollToContact}
